@@ -41,12 +41,19 @@ export class GeoDataModuleService {
     return map
     }
 
+
+
+//--fetchApi---------------//
+
+getData():Observable<any>{
+  return from(this.parcel.find())
+}
+
+
 //----DeleteApi----------------------------//
  async deleteGeoData(id:number){
   return from(this.parcel.delete(id))
- }
-
-
+    }
   }
 
 

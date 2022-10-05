@@ -99,22 +99,31 @@ async createParcelPoint(
 
   };
 
+  
+  //-------FetchApi-----------//
+  @Get('getData')
+      getData(@Param()id:number):Observable<any>{
+
+     let user = {
+       name:"hayat",
+     }
+
+        return from(this.geoDataModuleService.getData())
+      }
+
+
+
+
+
 //----deleteApi-------GeoJSON---//
 
 @Delete("/:id")
    deleteData(@Param()id:number):Observable<any>{
-
-    let user ={
-      name:"hayat",
-      rollNo:34
-    }
-    console.log(user.name);
-    
     return from(this.geoDataModuleService.deleteGeoData(id))
    }
-
-
-
 }
+
+
+
 
 
