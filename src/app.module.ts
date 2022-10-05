@@ -9,6 +9,7 @@ import { GeoDataModuleModule } from './geo-data-module/geo-data-module.module';
   imports: [
     ConfigModule.forRoot({ isGlobal: true }),
     TypeOrmModule.forRoot({
+      
       type: 'postgres',
       host: process.env.POSTGRES_HOST,
       port: parseInt(<string>process.env.POSTGRES_PORT),
